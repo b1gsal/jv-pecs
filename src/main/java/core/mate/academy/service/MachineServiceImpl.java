@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
+public class MachineServiceImpl implements MachineService<Machine> {
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
         if (type == Bulldozer.class) {
@@ -30,7 +30,7 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
     }
 
     @Override
-    public void fill(List<? super T> machines, T value) {
+    public void fill(List<? super Machine> machines, Machine value) {
         Collections.fill(machines, value);
     }
 
